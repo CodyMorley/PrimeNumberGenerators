@@ -47,7 +47,7 @@ func primesUpToDijkstra(_ n: Int) -> [Int] {
     var pool = [(multiple: 4, prime: 2)]
     var primes = [2]
     
-    for i in stride(from: 3, through: n, by: 1) {
+    for i in stride(from: 3, through: n, by: 2) {
         while pool[0].multiple < i {
             let (multiple, prime) = pool.removeFirst()
             pool.append((multiple + prime, prime))
